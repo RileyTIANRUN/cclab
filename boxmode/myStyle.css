@@ -1,0 +1,28 @@
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    color:rgb(38, 27, 112);
+}
+.specialLetter{
+    background-color: coral;
+}
+.ya{
+    width: 50px;
+}
+.image-box{
+    border-width: 2px;
+    border-style: dotted;
+    border-color: blacks;
+    padding: 15px;
+    margin: 15px;
+}
+div{
+    background-color: beige;
+    width: 200px;
+    height: 200px;
+}
+.second{
+    background-color: aquamarine;
+    position: relative;
+    
+}
