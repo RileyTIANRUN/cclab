@@ -1,0 +1,77 @@
+#canvasContainer1{
+    margin-left: 100px;
+    /* border-style: dotted;
+    border-width: 10px; */
+    width: 820px;
+    position: relative;
+    display: inline-block;
+    padding: 15px; 
+}
+#textcontainer{
+    position: absolute;
+    top: 70px;
+    margin-left: 140px;
+    width: 500px;
+    /* border: 2px black solid; */
+    display: inline-block;
+}
+.holder{
+    /* border: 2px black solid; */
+    height: fit-content;
+    width: 1000px;
+    margin: auto;
+    
+}
+.headstyle{
+    /* border: 1px black dashed; */
+    display: inline-block;
+    width:100px
+} 
+.mypic{
+    width: 100px;
+}
+.friendpic{
+    margin: 6px;
+    width: 40px;
+}
+.myname p{
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    margin: 0;
+    font-size: 30px;
+    color: rgb(106, 151, 196);
+}
+.top{
+    /* border: 5px red solid; */
+    position: relative;
+    height: 130px
+}
+.interact{
+    width: 150px;
+    margin-left: 770px;
+    display: inline-block;
+}
+.bottom{
+    width: 1000px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.time{
+    display: inline-block;
+    margin-left: 110px;
+    color: rgb(166, 160, 160);
+}
+.who-like{
+    background-color: rgb(219, 212, 212);
+    height: 62px;
+    width: 950px;
+}
+.who-like p{
+    margin-left: 20px;
+
+}
+body{
+    background-color:beige
+}
