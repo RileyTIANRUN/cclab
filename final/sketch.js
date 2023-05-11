@@ -13,6 +13,8 @@ let tem=10
 let y=300
 let Drops3=[]
 let gases=[]
+let Drops4=[]
+let Drops5=[]
 function setup() {
     let cnv= createCanvas(1000, 1500);
     cnv.parent("canvasContainer1")  
@@ -39,18 +41,20 @@ function setup() {
 }
 
 function draw() {
-    if(mouseX>0&&mouseX<550&&mouseY>250&&mouseY<450){
-        y=mouseY
-    }
-    let color=map(y,250,450,100,0)
-    let b=map(color,0,100,230,0)
-    let r=map(color,0,100,0,230)
-  background(r,60,b,40);
+//     if(mouseX>0&&mouseX<550&&mouseY>250&&mouseY<450){
+//         y=mouseY
+//     }
+//     let color=map(y,250,450,100,0)
+//     let b=map(color,0,100,230,0)
+//     let r=map(color,0,100,0,230)
+//   background(r,60,b,40);
+background(255)
   scale(0.5)
   //console.log(CHI.length)
   let frame1=frameCount
   let frame2=frameCount
   let frame3=frameCount
+  let frame5=frameCount
   //let tempreture=document.getElementById("tempre")
   for(let i=0;i<CHI.length;i++){
   CHI[i].update();
@@ -103,6 +107,23 @@ function draw() {
     Drops3[i].update()
     Drops3[i].display()
   }
+  if(frame3>1000&&frame3%30==0){
+    Drops4.push(new Drop4(1210,180))
+    
+  }
+  for(let i=0;i<Drops4.length;i++){
+    Drops4[i].update()
+    Drops4[i].display()
+  }
+  if(frame5>1100&&frame5%60==0){
+    Drops5.push(new Drop5(500,520))
+    
+  }
+  for(let i=0;i<Drops5.length;i++){
+    Drops5[i].update()
+    Drops5[i].display()
+  }
+  
 
   //circle(x1,y1,20)
 //   quad(x1+1000,y1-1300,x1+1010,y1-1280,500,400,510,380)
@@ -199,7 +220,9 @@ function drawthermometer(frame3){
         rect(-300,i,20,1)
     }
     stroke(0)
-    fill(0,200,200)
+    strokeWeight(10)
+    //fill(0,200,200)
+    fill(255)
     rect(-50,0,100,400,20)
     rect(-10,20,20,360,40)
     for(let i=40;i<=360;i+=15){
@@ -239,6 +262,8 @@ class rail{
     push()
     translate(this.x,this.y)
     rotate(this.dg)
+    strokeWeight(10)
+    stroke(0)
     rect(140,0,20,40)
     quad(190,60,190,-20,160,0,160,40)
     // fill(0)
@@ -312,7 +337,7 @@ class smallGear{
     push()
     translate(this.x,this.y)
     rotate(this.dg)
-    fill(50)
+    //fill(50)
     circle(0,0,40)
     fill(255)
     rect(-15,-2,30,4)
@@ -321,38 +346,38 @@ class smallGear{
     for(let i=1;i<=12;i++){
       let dg= 60 * (i%2)
       rotate(radians(dg))
-      fill("gray")
-      noStroke()
-      beginShape()
-      vertex(0,20)
-      vertex(-36,49)
-      vertex(-74,53)
-      vertex(-83,37)
+    //   fill("gray")
+    //   noStroke()
+    //   beginShape()
+    //   vertex(0,20)
+    //   vertex(-36,49)
+    //   vertex(-74,53)
+    //   vertex(-83,37)
       
       
-      vertex(-60,12)
-      vertex(-60,-12)
+    //   vertex(-60,12)
+    //   vertex(-60,-12)
       
       
       
       
-      //vertex()
-      endShape(CLOSE)
+    //   //vertex()
+    //   endShape(CLOSE)
       strokeWeight(10)
-      //stroke(0)
+      stroke(0)
       //circle(-100,0,10)
-      //line(-60,0,0,0)
+    //   line(-60,0,0,0)
       line(-60,-12,-60,12)
       line(-60,-12,-83,-37)
       line(-60,12,-83,37)
       line(-83,37,-74,53)
-      //line(-83,30,-60,30)
-      //line(-125,-12,-120,30)
-      //line(-100,0,0,0)
+    //   line(-83,30,-60,30)
+    //   line(-125,-12,-120,30)
+    //   line(-100,0,0,0)
       
       //circle(-120,30,10)
-      //line(-120,30,0,0)
-      //line(-60,30,-56,44)
+    //   line(-120,30,0,0)
+    //   line(-60,30,-56,44)
       
       
     }
@@ -382,35 +407,37 @@ class fan{
     push();
     translate(this.x,this.y)
     rotate(this.dg)
-    fill(150)
+    //fill(150)
+    stroke(0)
+    strokeWeight(10)
     circle(0,0,40)
     //rect(-15,-2,30,4)
     push()
     for(let i=1;i<=24;i++){
       let dg= 30 * (i%2)
       rotate(radians(dg))
-      
-      fill("gray")
-      beginShape()
-      vertex(0,0)
-      vertex(-100,0)
-      vertex(-123,20)
-      vertex(0,0)
-      endShape(CLOSE)
+      stroke(0)
+    //   fill("gray")
+    //   beginShape()
+    //   vertex(0,0)
+    //   vertex(-100,0)
+    //   vertex(-123,20)
+    //   vertex(0,0)
+    //   endShape(CLOSE)
       //circle(-100,0,10)
       line(-100,0,0,0)
       line(-123,20,0,0)
       line(-100,0,-123,20)
-      // line(-100,-12,-100,12)
-      // line(-100,-12,-123,-20)
-      // line(-100,12,-123,20)
-      // line(-123,20,-120,30)
-      //line(-125,-12,-120,30)
-      //line(-100,0,0,0)
+    //   line(-100,-12,-100,12)
+    //   line(-100,-12,-123,-20)
+    //   line(-100,12,-123,20)
+    //   line(-123,20,-120,30)
+    //   line(-125,-12,-120,30)
+    //   line(-100,0,0,0)
       
       //circle(-120,30,10)
-      //line(-120,30,0,0)
-      line(-120,30,-116,44)
+    //   line(-120,30,0,0)
+    //   line(-120,30,-116,44)
       
       
     }
@@ -437,7 +464,8 @@ class largeGear{
     translate(this.x,this.y)
     rotate(this.dg)
     stroke(0)
-    fill(50)
+    strokeWeight(10)
+    //fill(50)
     circle(0,0,40)
     fill(255)
     rect(-15,-2,30,4)
@@ -480,6 +508,8 @@ class pot{
     push()
     translate(this.x,this.y)
     fill("gray")
+    stroke(0)
+    strokeWeight(10)
     beginShape()
     arc(0,0,150,45,4*PI/5,PI/5)
     arc(0,100,200,200,PI*2/3,4*PI/3-0.03) 
@@ -487,7 +517,7 @@ class pot{
     arc(0,190,120,22,9*PI/5+0.5,6*PI/5-0.5)
     // arc(0,50,300,400,5*PI/3,PI/3)
      endShape(CLOSE)
-    noStroke()
+   
     ellipse(0,100,200,200)
     fill("#BA740B")
     quad(-10,190,0,200,-90,220,-100,210)
@@ -672,5 +702,89 @@ class Drop2{
       if(this.d>800-this.tem){
         Drops3.splice(0,1)
       }
+    }
+  }
+  class Drop4{
+    constructor(x,y){
+      this.x=x
+      this.y=y
+      this.sc=0
+      this.ysp=0.1
+      this.yac=0.5 
+      this.d=0
+      
+    }
+    display(){
+      push()
+      translate(this.x,this.y)
+      
+      scale(this.sc)
+      stroke("#F44336")
+      fill("#F44336")
+      triangle(17,36,-17,36,0,66)
+      beginShape()
+      arc(0,66,50,80,5*PI/3,4*PI/3)
+      vertex(17,36)
+      vertex(0,0)
+      vertex(-17,36)
+      endShape(CLOSE)
+      pop()
+    }
+    update(){
+      if(this.sc<=0.16){
+        this.sc+=0.01
+      }
+   
+      if(this.sc>=0.15){
+      this.y+=this.ysp
+      this.d+=this.ysp
+      this.ysp+=this.yac
+      }
+
+      if(this.d>100){
+        Drops4.splice(0,1)
+    }
+    }
+  }
+  class Drop5{
+    constructor(x,y){
+      this.x=x
+      this.y=y
+      this.sc=0
+      this.ysp=0.1
+      this.yac=0.3 
+      this.d=0
+      
+    }
+    display(){
+      push()
+      translate(this.x,this.y)
+      
+      scale(this.sc)
+      stroke("#F44336")
+      fill("#F44336")
+      triangle(17,36,-17,36,0,66)
+      beginShape()
+      arc(0,66,50,80,5*PI/3,4*PI/3)
+      vertex(17,36)
+      vertex(0,0)
+      vertex(-17,36)
+      endShape(CLOSE)
+      pop()
+    }
+    update(){
+      if(this.sc<=0.16){
+        this.sc+=0.01
+      }
+   
+      if(this.sc>=0.15){
+      this.y+=this.ysp
+      this.d+=this.ysp
+      this.ysp+=this.yac
+      }
+
+      if(this.d>350){
+        Drops5.splice(0,1)
+    }
     }
   }

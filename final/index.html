@@ -7,28 +7,19 @@
     <title>Document</title>
     <script src="../lib-p5/p5.js"></script>
     <script src="../lib-p5/p5.sound.js"></script>
-    <!-- <script type="text/javascript">
-        function show(){
-            tempre = document.getElementById("tempre")
-            num    = document.getElementById("num")
-            num.value = tempre.value
-        }
-    </script> -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="top">
-        <h1>How "temperature" comes from</h1>
+    <div id="canvasContainerback"></div>
+    <div class="intro">
+        <h1>How temperature comes from</h1>
+        <p></p>
+        <h1>Welcome to weather factory</h1>
+        <p></p>
+        <h1><a href="instruction.html" style="color: black;">click here to move on</a></h1>
     </div>
-    <div class="holder">
-        <!-- <input type="range" id="tempre" min="0" max="100" step="0.1" value="0" onchange="show()"/><br>
-        <input type="text" id="num"/><br> -->
-        <!-- <div id="canvasContainer2"></div> -->
-        <div id="canvasContainer1"></div>
-    
-        <!-- <p>hello can you see me</p> -->
-    </div>
-    <script type="text/javascript" src="sketch.js"></script> 
-    <!-- <script type="text/javascript" src="finalsketch.js"></script>  -->
+    <audio src="gear.mp3" autoplay loop></audio>
+
+    <script src="background.js"></script>
 </body>
 </html>

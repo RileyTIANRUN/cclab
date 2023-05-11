@@ -1,27 +1,9 @@
-#canvasContainer{
-    border: 2px black solid;
-    width: 1200px;
-    position: relative;
-    display: inline-block;
-    padding: 15px; 
-    margin: auto;
+.intro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
-.holder{
-    height: fit-content;
-    width: 1200px;
-    margin: auto;
-    margin-top: 200px;
-}
-body{
-
-    background-color:beige
-}
-.top{
-    position: fixed;
-    width:100%;
-    top: 0px;
-    background-color:beige;
-
-    border-bottom: 5px dashed black;
-  
+#canvasContainerback{
+    margin-top: 5px;
+    position: absolute;
 }

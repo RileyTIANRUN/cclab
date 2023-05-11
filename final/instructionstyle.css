@@ -1,0 +1,45 @@
+.holder{
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    margin-left: 25%;
+
+}
+.image{
+    display: inline-block;
+    position: absolute;
+}
+img{
+    width: 200px;
+}
+#second{
+    margin-top: 250px;
+}
+#third{
+    margin-top: 500px;
+}
+#forth{
+    margin-right: 0px;
+    margin-top: 0px;
+}
+#fifth{
+    margin-right: 0px;
+    margin-top: 250px;
+}
+#sixth{
+    margin-right: 0px;
+    margin-top: 500px
+}
+body{
+    background-color: black;
+}
+h1{
+    color: white ;
+}
+p{
+    color: white;
+    font-size: 20px;
+}
+#projectAA{
+    width: 800px;
+}
