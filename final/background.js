@@ -11,7 +11,7 @@ let b1=0
 let b2=0
 function setup() {
 
-  let cnv=createCanvas(1600, 800);
+  let cnv=createCanvas(1700, 800);
   cnv.parent("canvasContainerback");
   CHI.push(new largeGear(50,60,1, 0))
   CHI.push(new largeGear(280,60,-1, 39))
