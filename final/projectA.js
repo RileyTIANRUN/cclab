@@ -19,7 +19,7 @@ let flower=[]
 function setup() {
     
   let cnv=createCanvas(1000,1000);
-  cnv.parent("canvasContainer");
+  cnv.parent("projectA");
   for (let i = -100; i <= width + 100; i++) {
     cl[i] = random(20, 45);
     r1[i] = random(10, 30);
